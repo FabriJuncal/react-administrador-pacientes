@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/administrador-pacientes-react/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/administrador-pacientes-react/static/js/main.9e166611.chunk.js",
+    "main.js.map": "/administrador-pacientes-react/static/js/main.9e166611.chunk.js.map",
+    "runtime-main.js": "/administrador-pacientes-react/static/js/runtime-main.1dfd0c58.js",
+    "runtime-main.js.map": "/administrador-pacientes-react/static/js/runtime-main.1dfd0c58.js.map",
+    "static/js/2.e655e3db.chunk.js": "/administrador-pacientes-react/static/js/2.e655e3db.chunk.js",
+    "static/js/2.e655e3db.chunk.js.map": "/administrador-pacientes-react/static/js/2.e655e3db.chunk.js.map",
+    "static/js/3.2f986464.chunk.js": "/administrador-pacientes-react/static/js/3.2f986464.chunk.js",
+    "static/js/3.2f986464.chunk.js.map": "/administrador-pacientes-react/static/js/3.2f986464.chunk.js.map",
+    "index.html": "/administrador-pacientes-react/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/administrador-pacientes-react/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.e655e3db.chunk.js.LICENSE.txt": "/administrador-pacientes-react/static/js/2.e655e3db.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/administrador-pacientes-react/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1dfd0c58.js",
+    "static/js/2.e655e3db.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.9e166611.chunk.js"
+  ]
+}
