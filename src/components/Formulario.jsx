@@ -1,6 +1,20 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 const Formulario = () => {
+
+    // Creamos el State de Citas
+    const [cita, actualizarCita] = useState({
+        mascota:  '',
+        propietario: '',
+        fecha: '',
+        hora: '',
+        sintomas: ''
+    });
+
+    // Función que se ejecuta cada vez que el usuario escribe en el input
+    const actualizarState = () => {
+        console.log('escribiendo...')
+    }
     return ( 
         <Fragment>
             <h2>Crear Citas</h2>
@@ -12,6 +26,7 @@ const Formulario = () => {
                     name="mascota"
                     className="u-full-width"
                     placeholder="Nombre Mascota"
+                    onChange={actualizarState}
                 />
 
                 <label>Nombre Dueño</label>
@@ -20,6 +35,7 @@ const Formulario = () => {
                     name="propietario"
                     className="u-full-width"
                     placeholder="Nombre dueño de la mascota"
+                    onChange={actualizarState}
                 />
 
                 <label>Fecha</label>
@@ -27,6 +43,7 @@ const Formulario = () => {
                     type="date"
                     name="fecha"
                     className="u-full-width"
+                    onChange={actualizarState}
                 />
 
                 <label>Hora</label>
@@ -34,12 +51,14 @@ const Formulario = () => {
                     type="time"
                     name="hora"
                     className="u-full-width"
+                    onChange={actualizarState}
                 />
 
                 <label>Síntomas</label>
                 <textarea
                     className="u-full-width"
                     name="sintomas"
+                    onChange={actualizarState}
                 ></textarea>
 
                 <button
