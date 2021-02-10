@@ -12,9 +12,23 @@ const Formulario = () => {
     });
 
     // Función que se ejecuta cada vez que el usuario escribe en el input
-    const actualizarState = () => {
-        console.log('escribiendo...')
+    const actualizarState = (e) => {
+        // Tomamos el parametro con los datos del evento 
+        // y aprovechamos el atributo "name" de los inputs del formulario para mapear los datos (e.target.name)
+        // y tomamos el valor del input y lo agregamos al array (e.target.value)
+
+        // Utilizamos la sintaxis de "..." llamado "Spread Operator" para clonar el array "cita"
+        // Le pasamos como 1er parametro un array con la copia del array "cita"
+        // para que persistan los datos que le vayamos pasando en el 2do parametro
+        actualizarCita({
+            ...cita,
+            [e.target.name]: e.target.value
+        })
     }
+
+    // Extraemos los valores del array "cita" creado con el "useState"
+    const { mascota, propietario, fecha, hora, sintomas } = cita;
+
     return ( 
         <Fragment>
             <h2>Crear Citas</h2>
@@ -27,6 +41,7 @@ const Formulario = () => {
                     className="u-full-width"
                     placeholder="Nombre Mascota"
                     onChange={actualizarState}
+                    value={mascota} // Agregamos  el valor del array "cita" creado con el "useState"
                 />
 
                 <label>Nombre Dueño</label>
@@ -36,6 +51,7 @@ const Formulario = () => {
                     className="u-full-width"
                     placeholder="Nombre dueño de la mascota"
                     onChange={actualizarState}
+                    value={propietario} // Agregamos  el valor del array "cita" creado con el "useState"
                 />
 
                 <label>Fecha</label>
@@ -44,6 +60,7 @@ const Formulario = () => {
                     name="fecha"
                     className="u-full-width"
                     onChange={actualizarState}
+                    value={fecha} // Agregamos  el valor del array "cita" creado con el "useState"
                 />
 
                 <label>Hora</label>
@@ -52,6 +69,7 @@ const Formulario = () => {
                     name="hora"
                     className="u-full-width"
                     onChange={actualizarState}
+                    value={hora} // Agregamos  el valor del array "cita" creado con el "useState"
                 />
 
                 <label>Síntomas</label>
@@ -59,6 +77,7 @@ const Formulario = () => {
                     className="u-full-width"
                     name="sintomas"
                     onChange={actualizarState}
+                    value={sintomas} // Agregamos  el valor del array "cita" creado con el "useState"
                 ></textarea>
 
                 <button
