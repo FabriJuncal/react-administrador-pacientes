@@ -12,7 +12,7 @@ const Formulario = () => {
     });
 
     // Función que se ejecuta cada vez que el usuario escribe en el input
-    const actualizarState = (e) => {
+    const actualizarState = e => {
         // Tomamos el parametro con los datos del evento 
         // y aprovechamos el atributo "name" de los inputs del formulario para mapear los datos (e.target.name)
         // y tomamos el valor del input y lo agregamos al array (e.target.value)
@@ -29,11 +29,19 @@ const Formulario = () => {
     // Extraemos los valores del array "cita" creado con el "useState"
     const { mascota, propietario, fecha, hora, sintomas } = cita;
 
+    const submitCita = e => {
+        e.preventDefault();
+
+        alert('Enviando Cita...');
+    }
+
     return ( 
         <Fragment>
             <h2>Crear Citas</h2>
 
-            <form>
+            <form
+                onSubmit={submitCita}
+            >
                 <label>Nombre Mascota</label>
                 <input 
                     type="text"
