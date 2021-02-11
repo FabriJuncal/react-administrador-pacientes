@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import uuid from 'react-uuid';
 
-const Formulario = () => {
+const Formulario = ({crearCita}) => {
 
     // Creamos el State de Citas
     const [cita, actualizarCita] = useState({
@@ -47,10 +47,11 @@ const Formulario = () => {
         actualizarError(false);
 
         // Generamos un ID con la libreria 
-
         cita.id = uuid();
 
-        console.log(cita);
+        // Creamos la cita
+        // Utilizamos la función que se envió por parametro (o props) desde el componente padre para crear las Citas
+        crearCita(cita);
 
     }
 
