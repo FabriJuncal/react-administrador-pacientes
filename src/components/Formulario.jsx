@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import uuid from 'react-uuid';
 
 const Formulario = () => {
 
@@ -38,9 +39,19 @@ const Formulario = () => {
         //.trim(): Eliminas los espacios en blancos del comienzo y del final de un string
         if(mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === ''){
             // Actualizamos el State de Errores a "true" en el caso que se envie un campo vacio
-            actualizarError(true)
+            actualizarError(true);
             return
         }
+
+        // En el caso que pase la validación volvemos a actualizar el state de errores a "false" para que no se siga mostrando el mensaje de error
+        actualizarError(false);
+
+        // Generamos un ID con la libreria 
+
+        cita.id = uuid();
+
+        console.log(cita);
+
     }
 
     return ( 
