@@ -10,7 +10,7 @@ function App() {
   // Creamos la función que utilizará el useState para ir guardando las Citas
   const crearCita = cita => {
     guardarCitas([
-      ...citas,
+      ...citas,  // Hacemos una copia del array y le pasamos un nuevo objeto para que no se pierdan los datos del State
       cita
     ])
   }
@@ -18,10 +18,20 @@ function App() {
   // Creamos la función que utiliará el useState de Citas para ir eliminandolas
   const eliminarCita = id => {
 
+    // Filtramos el array "citas" por los IDs distintos al que le pasamos,
+    // de este modo nos creará un array sin la cita que corresponda a este ID,
+    // y lo estaríamos eliminando.
+    // (Si hicieramos que nos filtrara las citas igual al que le pasamos, solo nos devolvería la cita con este ID)
+
     const nuevasCitas = citas.filter(cita => cita.id !== id);
 
+    // Como "nuevaCitas" ya es un array, solo le pasamos como parametro a la función "guardarCitas"
+    // De este modo actualizará el State de citas, sin la cita que hacía referencia al ID que le pasamos
     guardarCitas(nuevasCitas);
   }
+
+   // Titulo condicional dependiendo de la existencia de las Citas
+   const titulo = citas.length === 0 ? 'No hay citas' : 'Administra tus Citas';
 
   return (
       <Fragment>
@@ -34,7 +44,7 @@ function App() {
                   />
                 </div>
                 <div className="one-half column">
-                  <h2>Administra tus citas</h2>
+                  <h2>{titulo}</h2>
                   {citas.map(cita => (
                     <Cita
                       key={cita.key}
