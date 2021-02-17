@@ -1,17 +1,36 @@
-import React, { Fragment, useState, useEffect} from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Formulario from './components/Formulario';
 import Cita from './components/Cita';
 
 function App() {
 
+  // Tomamos el valor del Item "cita" proveniente del LocalStorage
+  // JSON.parse(): Parseamos a JSON los datos obtenidos del LocalStorage, ya que este solo soporta datos de tipo String
+  let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+  // Si no tenemos datos cargados en el LocalStorage declaramos la variable como un array
+  if(!citasIniciales){
+    citasIniciales = [];
+  }
+
   // Creamos el useState para almacenar las Citas
-  const [citas, guardarCitas] = useState([]);
+  const [citas, guardarCitas] = useState(citasIniciales); // Le pasamos como parametro al useState la variable con los datos del LocalStorage
 
   // useEffect(): se utiliza para detectar cambios en el State del componente una vez que este se termine de cargar
   //              y siempre se le tiene que pasar un arrow function como 1er parametro con el codigo que queremos que se ejecute.              
   //              y como 2do parametro se agregan las dependencias, es decir los State's que queremos que mire la función useEffect().
   useEffect( () => {
-    console.log('Documento listo o algo paso con las citas');
+
+    if(citasIniciales){
+      // Si se actualiza el State de "citas" y este contiene datos, entonces lo cargamos en el LocalStorage
+      // JSON.stringify(): Tranforma el Array a String, que es lo unico que soporta LocalStorage
+      localStorage.setItem('citas', JSON.stringify(citas));
+    }else{
+      // En el caso que se cargue por primera vez y no se tenga datos en el State de "citas", cargamos un array vacio en el LocalStorage
+      // JSON.stringify(): Tranforma el Array a String, que es lo unico que soporta LocalStorage
+      localStorage.setItem('citas',  JSON.stringify([]));
+    }
+
+
   }, [citas]) ; // Para que la función "useEffec()" solo se ejecute una sola vez y no genere un bucle
                 // Se le tiene eque pasar como 2do parametro un Array [] vacio
 
