@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import uuid from 'react-uuid';
+import PropTypes from 'prop-types';
 
 const Formulario = ({crearCita}) => {
 
@@ -132,5 +133,21 @@ const Formulario = ({crearCita}) => {
         </Fragment>
     );
 }
- 
+
+// Documentamos el componente con "PropTypes"
+// IMPORTANTE: No se documentan las Key/Id (o valor unico) que le pasamos al componente.
+//             Solo se documentan los parametros que recibe la función principal del componente
+Formulario.propTypes = {
+    // Key: Pasamos el nombre del PROP que pasamos al componente
+    // Value: Pasamos el tipo de PROP que estamos pasando al componente
+    //        Funcion de puntos: 
+    //        1) Siempre se pasa el objeto "PropTypes"
+    //        2) Se pasa el tipo de PROP (number, string, object, func, array, etc)
+    //        3) Se pasa "isRequired" en el caso que sea obligatorio
+
+    // Si existen algunos problemas de inconsistencias con el tipo de PROP que estamos pasando al componente
+    // Este nos avisará de algun error y el motivo.
+    crearCita: PropTypes.func.isRequired
+}
+
 export default Formulario;

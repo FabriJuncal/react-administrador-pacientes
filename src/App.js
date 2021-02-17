@@ -19,6 +19,9 @@ function App() {
   //              y siempre se le tiene que pasar un arrow function como 1er parametro con el codigo que queremos que se ejecute.              
   //              y como 2do parametro se agregan las dependencias, es decir los State's que queremos que mire la función useEffect().
   useEffect( () => {
+    // Tomamos el valor del Item "cita" proveniente del LocalStorage
+    // JSON.parse(): Parseamos a JSON los datos obtenidos del LocalStorage, ya que este solo soporta datos de tipo String
+    let citasIniciales = JSON.parse(localStorage.getItem('citas'));
 
     if(citasIniciales){
       // Si se actualiza el State de "citas" y este contiene datos, entonces lo cargamos en el LocalStorage
