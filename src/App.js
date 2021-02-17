@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect} from "react";
 import Formulario from './components/Formulario';
 import Cita from './components/Cita';
 
@@ -6,6 +6,14 @@ function App() {
 
   // Creamos el useState para almacenar las Citas
   const [citas, guardarCitas] = useState([]);
+
+  // useEffect(): se utiliza para detectar cambios en el State del componente una vez que este se termine de cargar
+  //              y siempre se le tiene que pasar un arrow function como 1er parametro con el codigo que queremos que se ejecute.              
+  //              y como 2do parametro se agregan las dependencias, es decir los State's que queremos que mire la función useEffect().
+  useEffect( () => {
+    console.log('Documento listo o algo paso con las citas');
+  }, [citas]) ; // Para que la función "useEffec()" solo se ejecute una sola vez y no genere un bucle
+                // Se le tiene eque pasar como 2do parametro un Array [] vacio
 
   // Creamos la función que utilizará el useState para ir guardando las Citas
   const crearCita = cita => {
