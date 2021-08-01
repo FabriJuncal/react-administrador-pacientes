@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/administrador-pacientes-react/static/css/main.e41b0abc.chunk.css",
-    "main.js": "/administrador-pacientes-react/static/js/main.91b54dc9.chunk.js",
-    "main.js.map": "/administrador-pacientes-react/static/js/main.91b54dc9.chunk.js.map",
-    "runtime-main.js": "/administrador-pacientes-react/static/js/runtime-main.5b5862f6.js",
-    "runtime-main.js.map": "/administrador-pacientes-react/static/js/runtime-main.5b5862f6.js.map",
-    "static/js/2.3ead6ad4.chunk.js": "/administrador-pacientes-react/static/js/2.3ead6ad4.chunk.js",
-    "static/js/2.3ead6ad4.chunk.js.map": "/administrador-pacientes-react/static/js/2.3ead6ad4.chunk.js.map",
-    "static/js/3.28849f85.chunk.js": "/administrador-pacientes-react/static/js/3.28849f85.chunk.js",
-    "static/js/3.28849f85.chunk.js.map": "/administrador-pacientes-react/static/js/3.28849f85.chunk.js.map",
-    "index.html": "/administrador-pacientes-react/index.html",
-    "static/css/main.e41b0abc.chunk.css.map": "/administrador-pacientes-react/static/css/main.e41b0abc.chunk.css.map",
-    "static/js/2.3ead6ad4.chunk.js.LICENSE.txt": "/administrador-pacientes-react/static/js/2.3ead6ad4.chunk.js.LICENSE.txt"
+    "main.css": "/react-administrador-pacientes/static/css/main.378968df.chunk.css",
+    "main.js": "/react-administrador-pacientes/static/js/main.38bf4299.chunk.js",
+    "main.js.map": "/react-administrador-pacientes/static/js/main.38bf4299.chunk.js.map",
+    "runtime-main.js": "/react-administrador-pacientes/static/js/runtime-main.ecdbd6f9.js",
+    "runtime-main.js.map": "/react-administrador-pacientes/static/js/runtime-main.ecdbd6f9.js.map",
+    "static/js/2.84062521.chunk.js": "/react-administrador-pacientes/static/js/2.84062521.chunk.js",
+    "static/js/2.84062521.chunk.js.map": "/react-administrador-pacientes/static/js/2.84062521.chunk.js.map",
+    "static/js/3.d0aa5a7f.chunk.js": "/react-administrador-pacientes/static/js/3.d0aa5a7f.chunk.js",
+    "static/js/3.d0aa5a7f.chunk.js.map": "/react-administrador-pacientes/static/js/3.d0aa5a7f.chunk.js.map",
+    "index.html": "/react-administrador-pacientes/index.html",
+    "static/css/main.378968df.chunk.css.map": "/react-administrador-pacientes/static/css/main.378968df.chunk.css.map",
+    "static/js/2.84062521.chunk.js.LICENSE.txt": "/react-administrador-pacientes/static/js/2.84062521.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b5862f6.js",
-    "static/js/2.3ead6ad4.chunk.js",
-    "static/css/main.e41b0abc.chunk.css",
-    "static/js/main.91b54dc9.chunk.js"
+    "static/js/runtime-main.ecdbd6f9.js",
+    "static/js/2.84062521.chunk.js",
+    "static/css/main.378968df.chunk.css",
+    "static/js/main.38bf4299.chunk.js"
   ]
 }
